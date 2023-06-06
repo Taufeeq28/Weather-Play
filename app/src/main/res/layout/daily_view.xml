@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/DayAndDate"
+        android:layout_width="410dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:hint="Day date"
+        android:padding="4dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/HighLowTemp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!--            <ImageView-->
+    <!--                android:id="@+id/imgWeatherIcon"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="100dp"-->
+    <!--                android:layout_gravity="center"-->
+    <!--                android:contentDescription="@string/image" />-->
+
+
+    <TextView
+        android:id="@+id/HighLowTemp"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:hint="High Low Tem"
+        android:padding="4dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/Description"
+        app:layout_constraintEnd_toEndOf="@+id/Description"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DayAndDate" />
+
+    <TextView
+        android:id="@+id/Description"
+        android:layout_width="248dp"
+        android:layout_height="wrap_content"
+        android:hint="Description"
+        android:textColor="@color/white"
+        android:paddingLeft="6dp"
+        android:paddingBottom="5dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/ProbOfPrecipitation"
+        app:layout_constraintEnd_toEndOf="@+id/ProbOfPrecipitation"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/HighLowTemp" />
+
+    <TextView
+        android:id="@+id/ProbOfPrecipitation"
+        android:layout_width="208dp"
+        android:layout_height="25dp"
+        android:hint="Precip Prob"
+        android:textColor="@color/white"
+        android:paddingLeft="8dp"
+        android:textAlignment="gravity"
+        android:textSize="14sp"
+        android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/UVindex"
+        app:layout_constraintEnd_toEndOf="@+id/UVindex"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Description" />
+
+
+    <ImageView
+        android:id="@+id/WeatherIcon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="1dp"
+        android:contentDescription="Weather Image"
+        app:layout_constraintBottom_toBottomOf="@+id/UVindex"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.608"
+        app:layout_constraintStart_toEndOf="@+id/HighLowTemp"
+        app:layout_constraintTop_toBottomOf="@+id/DayAndDate"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/UVindex"
+        android:layout_width="208dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="203dp"
+        android:hint="Uv index"
+        android:textColor="@color/white"
+        android:paddingLeft="8dp"
+        android:textAlignment="inherit"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ProbOfPrecipitation" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:padding="10dp"
+        android:weightSum="4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/UVindex">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/MorningTemp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:text="Morning"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/AfternoonTemp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Afternoon"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/EveningTemp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Evening"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/NightTemp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:text="Night"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
